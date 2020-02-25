@@ -9,7 +9,7 @@
     <repositories>
         <repository>
             <id>maven2</id>
-            <url>http://repo1.maven.org/maven2</url>
+            <url>https://repo1.maven.org/maven2</url>
         </repository>
         <repository>
             <id>xuggle repo</id>
@@ -120,7 +120,8 @@
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
-            <version>2.0.31-beta</version>
+	    <!--             <version>2.0.31-beta</version> -->
+	    <version>2.28.2</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
