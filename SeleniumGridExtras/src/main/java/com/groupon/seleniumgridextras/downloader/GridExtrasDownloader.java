@@ -137,13 +137,12 @@ public class GridExtrasDownloader extends Downloader {
 
     public List<Map<String, String>> getAllDownloadableAssets() throws IOException, URISyntaxException {
         List<Map<String, String>> releaseList = new LinkedList<Map<String, String>>();
-
         List<LinkedTreeMap> releases = parseAllReleases();
 
         for (LinkedTreeMap currentRelease : releases) {
+	    System.out.println(currentRelease.toString());
             if (currentRelease.containsKey(ASSETS_KEY)) {
                 ArrayList listOfAssetsForCurrentRelease = (ArrayList) currentRelease.get(ASSETS_KEY);
-
                 for (int i = 0; i < listOfAssetsForCurrentRelease.size(); i++) {
                     LinkedTreeMap currentAsset = (LinkedTreeMap) listOfAssetsForCurrentRelease.get(i);
 

@@ -49,6 +49,7 @@ import java.util.Map;
 public class Resolution extends ExecuteOSTask {
   private final String[] osxGetResolution = {"bash", "-c", "system_profiler SPDisplaysDataType | grep Resolution"};
   private final String windowsSetResolution = "powershell.exe Set-DisplayResolution -Width %s -Height %s -Force";
+  private final String[] linuxGetResolution = {"bash", "-c", "xdpyinfo | awk '/dimensions/{print $2}'"};
 
   public Resolution() {
     setEndpoint(TaskDescriptions.Endpoints.RESOLUTION);
@@ -72,9 +73,10 @@ public class Resolution extends ExecuteOSTask {
       return getWindowsResolution();
     } else if (RuntimeConfig.getOS().isMac()) {
       return getOSXResolution();
+    } else if (RuntimeConfig.getOS().isLinux()) {
+      return getLinuxResolution();
     } else {
-      getJsonResponse().addKeyValues(JsonCodec.ERROR,
-                                     "Not yet implemented in Linux");
+      getJsonResponse().addKeyValues(JsonCodec.ERROR, "Not yet implemented");
       return getJsonResponse().getJson();
     }
   }
@@ -123,6 +125,10 @@ public class Resolution extends ExecuteOSTask {
 
   private JsonObject getOSXResolution() {
     return ExecuteCommand.execRuntime(osxGetResolution, waitToFinishTask);
+  }
+  
+  private JsonObject getLinuxResolution(){
+    return ExecuteCommand.execRuntime(linuxGetResolution, waitToFinishTask);
   }
 
 }

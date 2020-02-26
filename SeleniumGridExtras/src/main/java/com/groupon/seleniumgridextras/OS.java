@@ -51,6 +51,7 @@ public class OS {
 
     private static final String WINDOWS = "Windows";
     private static final String MAC = "Mac";
+    private static final String LINUX = "Linux";
     private static final String OS_NAME = "os.name";
     private static final String USER_HOME = "user.home";
     private static final String USER_NAME = "user.name";
@@ -65,6 +66,10 @@ public class OS {
 
     public boolean isMac() {
         return getOSName().startsWith(MAC);
+    }
+
+    public boolean isLinux() {
+    	return getOSName().startsWith(LINUX);
     }
 
     public String getOSName() {
