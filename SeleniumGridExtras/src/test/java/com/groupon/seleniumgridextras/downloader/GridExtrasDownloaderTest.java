@@ -162,28 +162,9 @@ public class GridExtrasDownloaderTest {
 
     @Test
     public void testGetAllAssets() throws Exception {
-        String expectedVersionOldest = "1.3.0";
-        String expectedVersionFifthOldest = "1.5.0";
-	System.out.println("11111111111111111111111111111111111111!!!!!");
         List<Map<String, String>> actual = downloader.getAllDownloadableAssets();
         int actualSize = actual.size();
-	System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-	System.out.println(actual.size());
-
         assertTrue(actualSize > 0);
-        // The below assertions don't work well when new releases come out. Removing them for now.
-//        assertEquals("SeleniumGridExtras-" + expectedVersionOldest +"-SNAPSHOT-jar-with-dependencies.jar",
-//                actual.get(actualSize - 1).keySet().toArray()[0]);
-
-//        assertEquals("https://github.com/groupon/Selenium-Grid-Extras/releases/download/v." + expectedVersionOldest + "/SeleniumGridExtras-" + expectedVersionOldest + "-SNAPSHOT-jar-with-dependencies.jar",
-//                actual.get(actualSize - 1).values().toArray()[0]);
-
-
-//        assertEquals("SeleniumGridExtras-" + expectedVersionFifthOldest + "-SNAPSHOT-jar-with-dependencies.jar",
-//                actual.get(actualSize - 5).keySet().toArray()[0]);
-
-//        assertEquals("https://github.com/groupon/Selenium-Grid-Extras/releases/download/v" + expectedVersionFifthOldest + "/SeleniumGridExtras-" + expectedVersionFifthOldest + "-SNAPSHOT-jar-with-dependencies.jar",
-//                actual.get(actualSize - 5).values().toArray()[0]);
     }
 
     @Test
