@@ -4,12 +4,12 @@
 
     <groupId>com.groupon.selenium-grid-extras</groupId>
     <artifactId>SeleniumGridExtras</artifactId>
-    <version>2.0.4-SNAPSHOT</version>
+    <version>2.0.5-SNAPSHOT</version>
 
     <repositories>
         <repository>
             <id>maven2</id>
-            <url>http://repo1.maven.org/maven2</url>
+            <url>https://repo1.maven.org/maven2</url>
         </repository>
         <repository>
             <id>xuggle repo</id>
