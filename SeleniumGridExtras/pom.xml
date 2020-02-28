@@ -13,20 +13,20 @@
         </repository>
         <repository>
             <id>xuggle repo</id>
-            <!-- <url>http://xuggle.googlecode.com/svn/trunk/repo/share/java/</url> -->
-            <url>https://raw.github.com/smccarthy/xuggle-xuggler-dependency/master</url>
+	    <!-- <url>http://xuggle.googlecode.com/svn/trunk/repo/share/java/</url> -->
+	    <url>https://raw.github.com/smccarthy/xuggle-xuggler-dependency/master</url>
         </repository>
     </repositories>
 
     <properties>
-        <version.selenium>3.8.1</version.selenium>
+        <version.selenium>3.141.0</version.selenium>
     </properties>
 
     <dependencies>
         <dependency> <!-- Selenium 3.7.1 comes with jna-platform 4.1.0 -->
             <groupId>net.java.dev.jna</groupId> <!-- Needed for BrowerVersionDetector (for IE) -->
             <artifactId>jna-platform</artifactId>
-            <version>4.1.0</version>
+            <version>5.5.0</version>
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -120,7 +120,7 @@
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
-            <version>2.28.2</version>
+            <version>2.22.0</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

@@ -29,7 +29,6 @@ import java.util.concurrent.Future;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-
 public class SetupTeardownProxyTest {
 
     private TestSession mockTestSession;
